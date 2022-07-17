@@ -1,0 +1,36 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+## Raw Data
+election_data_database:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/election_data.csv
+
+## PreProcessed Data
+preprocess_election_data:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/pp_election_data.csv
+
+election_features:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/election_features.csv
+
+## Auxiliary objects
+X_test:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/election_features.csvs
+
+linear_regression:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/linear_regression.pickle
+
+## Output
+final_predictions:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/final_predictions.csvs
+
+undummified_final_predictions:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/undummified_final_predictions.csvs
