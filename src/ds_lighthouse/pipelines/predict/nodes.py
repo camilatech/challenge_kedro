@@ -8,6 +8,7 @@ def batch_predict(model_artifact, dataset):
     """This function takes a pre-trained model
     and predicts an unknown dataset"""
     predictions = model_artifact.predict(dataset)
+    predictions = predictions.round().astype('int64')
     final_predictions = dataset  
     final_predictions['FinalMandates']=predictions
     return final_predictions

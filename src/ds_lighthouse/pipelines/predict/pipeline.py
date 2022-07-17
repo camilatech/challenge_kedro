@@ -10,7 +10,7 @@ def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
             node(
                 func=batch_predict,
-                inputs=['linear_regression', 'X_test'],
+                inputs=['linear_regression', 'validate'],
                 name='batch_predict',
                 outputs='final_predictions'
             ),
