@@ -12,7 +12,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         node (
                 func=slip_data,
                 inputs=['election_features'],
-                outputs=['X_train', 'X_test', 'y_train', 'y_test'],
+                outputs=['X_train', 'X_test', 'y_train', 'y_test', 'validate'],
                 name='slip_data_node'
         ),
         node(
