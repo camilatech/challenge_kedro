@@ -1,4 +1,4 @@
-# ds_lighthouse - MLOps Challenge
+# MLOps Challenge
 
 ## Overview
 
